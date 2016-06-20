@@ -14,13 +14,15 @@
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<link href="css/landon.css" rel="stylesheet">
 </head>
 <body>
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">
-					<img alt="Brand" src="..."></a>
+					<img alt="Brand" src="img/logo.jpg"></a>
+				<p class="navbar-text">Продажа лучшего протеина в мире</p>
 			</div>
 		</div>
 	</nav>
@@ -30,56 +32,89 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<div class="row">
 					<div class="col-xs-12">
-						<img src="img/goldwheystandard.jpg" class="img-responsive center-block" alt="ongoldstandard"></div>
+						<img src="img/goldwheystandard_small.jpg" class="img-responsive center-block" alt="ongoldstandard"></div>
 					</div>
 					<div class="col-xs-12">
-						<table class="table table-bordered">
+						<h2 class="text-center">Цены (доставка бесплатная)</h2>
+						<table class="table table-bordered table-condensed">
 							<tr>
 								<td>Кг</td>
-								<td>908г</td>
-								<td>1,5кг</td>
-								<td>2,27кг</td>
+								<td class="green">908г</td>
+								<td class="green">1,5кг</td>
+								<td class="green">2,27кг</td>
 							</tr>
 							<tr>
 								<td>Цена</td>
-								<td>20$</td>
-								<td>40$</td>
-								<td>60$</td>
+								<td class="red">20&#8381;</td>
+								<td class="red">40&#8381;</td>
+								<td class="red">60&#8381;</td>
 							</tr>
 						</table>
 					</div>
 				</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<div class="text-center"><h2>Оставляйте заказ прямо сейчас</h2></div>
-				<form role="form" action="https://docs.google.com/forms/d/1IJdnIsysiUy_cXbAy8cMHWynCWpRZ_W1crozsGpbWPU/formResponse" target="_self" method="POST" id="mG61H">
-					<div class="form-group">
-						<label for="inputWeight" class="control-label">Вес:</label>
-						<select class="form-control" name="entry.1020396869" id="inputWeight">
-							<option>908г</option>
-							<option>1,5кг</option>
-							<option>2,27кг</option>
-						</select>
+				<div class="row">
+					<div class="col-xs-12">
+						<h2 class="text-center">Оставляйте заказ прямо сейчас</h2>
+						<form role="form" action="https://docs.google.com/forms/d/1IJdnIsysiUy_cXbAy8cMHWynCWpRZ_W1crozsGpbWPU/formResponse" target="_self" method="POST" id="mG61H">
+							<div class="form-group">
+								<label for="inputWeight" class="control-label">Вес:</label>
+								<select class="form-control" name="entry.1020396869" id="inputWeight">
+									<option>908г</option>
+									<option>1,5кг</option>
+									<option>2,27кг</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="flavour" class="control-label">Вкус:</label>
+								<select class="form-control" name="entry.1515307311" id="flavour">
+									<option>Шоколад</option>
+									<option>Банан</option>
+									<option>Клубника</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="mobilePhone" class="control-label">Ваш телефон (в формате 89997776666):</label>
+								<input type="text" class="form-control" name="entry.488463398" id="mobilePhone" placeholder="Укажите телефон" required="required" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
+							</div>
+							<div class="form-group">
+								<label for="comment" class="control-label">Комментарий:</label>
+								<textarea class="form-control" name="entry.1695826378" id="comment" placeholder="Комментарий"></textarea>
+							</div>
+							<div class="text-center">
+								<button type="submit" class="btn btn-danger btn-lg" id="order">Заказать</button>
+							</div>
+						</form>
 					</div>
-					<div class="form-group">
-						<label for="flavour" class="control-label">Вкус:</label>
-						<select class="form-control" name="entry.1515307311" id="flavour">
-							<option>Шоколад</option>
-							<option>Банан</option>
-							<option>Клубника</option>
-						</select>
+					<div class="col-xs-12">
+						<h2 class="text-center">Преимущества</h2>
+						<ul>
+							<li>Минимально возможная цена при работе с авторизованным поставщиком</li>
+							<li>Бесплатная доставка в пределах МКАД</li>
+							<li>Возможность проверить протеин на подделку онлайн с помощью «batch#» кода</li>
+						</ul>
 					</div>
-					<div class="form-group">
-						<label for="mobilePhone" class="control-label">Ваш телефон (в формате 89997776666):</label>
-						<input type="text" class="form-control" name="entry.488463398" id="mobilePhone" placeholder="Укажите телефон" required="required" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
-					</div>
-					<div class="form-group">
-						<label for="comment" class="control-label">Комментарий:</label>
-						<textarea class="form-control" name="entry.1695826378" id="comment" placeholder="Комментарий"></textarea>
-					</div>
-					<div class="text-center">
-						<button type="submit" class="btn btn-danger btn-lg" id="order">Заказать</button>
-					</div>
-				</form>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs12">
+				<h2 class="text-center howwork">Как мы работаем?</h2>
+			</div>
+			<div class="col-xs-11 col-sm-3 col-md-3 text-center">
+				Вы оставляете заказ с помощью формы заказа
+			</div>
+			<div class="col-xs-1 col-sm-1 col-md-1">
+				<span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+			</div>
+			<div class="col-xs-11 col-sm-3 col-md-3 text-center">
+				С вами связывается менеджер, уточняющий детали заказа
+			</div>
+			<div class="col-xs-1 col-sm-1 col-md-1">
+				<span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-4 text-center">
+				Курьер привозит Вам заказ в удобное для Вас время и место, оплачиваете заказ наличными
 			</div>
 		</div>
 	</div>
