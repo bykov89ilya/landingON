@@ -1,0 +1,17 @@
+.red{
+	color: red;
+	font-weight: bold;
+}
+
+.green{
+	color: green;
+	font-weight: bold;
+}
+
+td{
+	font-size: 200%;
+}
+
+body{
+	padding-top: 80px;
+}
