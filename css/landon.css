@@ -8,10 +8,14 @@
 	font-weight: bold;
 }
 
-td{
+.fs200{
 	font-size: 200%;
 }
 
 body{
 	padding-top: 80px;
+}
+
+.mb30{
+	margin-bottom: 30px;
 }
