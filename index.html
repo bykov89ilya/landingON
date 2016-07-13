@@ -46,7 +46,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-6">
-					<img src="img/goldwheystandard_small.jpg" class="img-responsive center-block" alt="ongoldstandard">
+					<img src="img/gwst227.jpg" class="img-responsive center-block" alt="ongoldstandard">
 				</div>
 				<div class="col-xs-12 col-sm-6">
 					<h3 class="text-center">Оставляйте заказ прямо сейчас</h3>
@@ -87,6 +87,7 @@
 							<label for="comment" class="control-label">Комментарий:</label>
 							<textarea class="form-control" name="entry.1695826378" id="comment" placeholder="Комментарий"></textarea>
 						</div>
+						<input type="hidden" name="entry.2039883248" class="priceinput">
 						<div class="text-center">
 							<button type="submit" class="btn btn-danger btn-lg order">Заказать</button>
 						</div>
@@ -100,12 +101,12 @@
 						<div class="col-xs-6 col-xs-offset-3">
 							<table class="table table-bordered table-condensed fs200">
 								<tr>
-									<th>Кг</th>
-									<th>Цена</th>
+									<th class="text-center">Вес</th>
+									<th class="text-center">Цена</th>
 								</tr>
 								<tr>
-									<td class="green">2,27кг</td>
-									<td class="red">5000&#8381;</td>
+									<td class="green text-center">2,27кг</td>
+									<td id="price" class="red text-center">5000&#8381;</td>
 								</tr>
 							</table>
 						</div>
@@ -289,6 +290,7 @@
 						<label for="comment" class="control-label">Комментарий:</label>
 						<textarea class="form-control" name="entry.1695826378" id="comment" placeholder="Комментарий"></textarea>
 					</div>
+					<input type="hidden" name="entry.2039883248" class="priceinput">
 					<div class="text-center">
 						<button type="submit" class="btn btn-danger btn-lg order">Заказать</button>
 					</div>
@@ -330,6 +332,7 @@
 
 	<script type="text/javascript">
 		$(function() {
+			
 			$('.order').click(function() {
 				var formValid = true;
 				$('input').each(function() {
@@ -341,6 +344,21 @@
       				}
     			});
 			});
+			
+			$.getJSON(
+				"https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDRUB%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=",
+				{},
+				onAjaxSuccess
+			);
+
+			function onAjaxSuccess(data)
+			{
+			 	var price = Math.round(data.query.results.rate.Rate * 70 * 1.04);
+			 	$('#price').html(price + '&#8381');
+			 	$('.priceinput').val(price);
+			}
+
+
 		});
 	</script>
 </body>
